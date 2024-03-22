@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Аюур",
+    "slug": "ayur",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icons/logo-color.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/icons/logo-color.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/logo-color.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.zombie_01.ayur",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBQXuIC5PhnjyLdloilWKEH-QsNB-3FhCs"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/icons/ayur-favicon-color.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "03311265-69c0-430b-9fb9-ddca762d987b"
+      },
+      "googleMapsApiKey": "AIzaSyBQXuIC5PhnjyLdloilWKEH-QsNB-3FhCs"
+    },
+    "owner": "zombie_01"
+  }
+}
