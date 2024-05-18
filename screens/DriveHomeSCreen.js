@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   Image,
   SafeAreaView,
-  ScrollView
+  ScrollView,
 } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -22,7 +22,7 @@ export default function DriverHomeScreen() {
   const navigation = useNavigation();
   const dispatch = useDispatch();
   const [data, setData] = React.useState();
-  const [isGoing, setIsGoing] = React.useState(false);
+  const [isGoing, setIsGoing] = React.useState(true);
 
   React.useEffect(() => {
     const intervalId = setInterval(async () => {
@@ -34,8 +34,8 @@ export default function DriverHomeScreen() {
             HOST_API_KEY + "/orders/my_order?status=going",
             {
               headers: {
-                Authorization: `Bearer ${userToken}`
-              }
+                Authorization: `Bearer ${userToken}`,
+              },
             }
           );
 
@@ -65,13 +65,16 @@ export default function DriverHomeScreen() {
         <View className=" w-full bg-white relative">
           <View
             style={{ backgroundColor: "rgba(255,255,255,0.8)" }}
-            className="p-2 flex-row justify-between items-center rounded-full mx-2">
+            className="p-2 flex-row justify-between items-center rounded-full mx-2"
+          >
             <View
               style={{ backgroundColor: "rgba(255,255,255,0.8)" }}
-              className="p-2 flex-row justify-between items-center rounded-full mx-2">
+              className="p-2 flex-row justify-between items-center rounded-full mx-2"
+            >
               <View
                 style={{ backgroundColor: "rgba(255,255,255,0.4)" }}
-                className="p-1 rounded-full">
+                className="p-1 rounded-full"
+              >
                 <Image
                   style={{ backgroundColor: "rgba(255,255,255,0.4)" }}
                   className="w-16 h-16 rounded-full"
@@ -112,12 +115,13 @@ export default function DriverHomeScreen() {
                 onPress={() => {
                   dispatch(
                     setResturant({
-                      orderId: data?.orders[0]?.id
+                      orderId: data?.orders[0]?.id,
                     })
                   );
                   navigation.navigate("Жолоочийн газрын зураг");
                 }}
-                className="bg-white w-[80%] flex items-center justify-center h-[100px] rounded-r-full">
+                className="bg-white w-[80%] flex items-center justify-center h-[100px] rounded-r-full"
+              >
                 <Text className="text-black text-lg font-semibold">
                   Газрын зураг харах
                 </Text>
